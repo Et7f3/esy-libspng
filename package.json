@@ -27,7 +27,8 @@
       }
     },
     "buildEnv": {
-      "CPPFLAGS": "-O3 $CFLAGS"
+      "CFLAGS": "-O3 -fPIC $CFLAGS",
+      "CPPFLAGS": "$CFLAGS"
     },
     "build": [
       "cmake #{os == 'windows' ? '-DCMAKE_HOST_WIN32=true' : ''} -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=#{self.install} -S #{self.root} -B #{self.target_dir}",
