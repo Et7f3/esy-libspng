@@ -28,10 +28,11 @@
     },
     "buildEnv": {
       "CFLAGS": "-O3 -fPIC $CFLAGS",
-      "CPPFLAGS": "$CFLAGS"
+      "CPPFLAGS": "$CFLAGS",
+      "CC": "#{os == 'windows' ? 'x86_64-w64-mingw32-gcc' : 'cc'}"
     },
     "build": [
-      "cmake #{os == 'windows' ? '-DCMAKE_HOST_WIN32=true' : ''} -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=#{self.install} -S #{self.root} -B #{self.target_dir}",
+      "cmake #{os == 'windows' ? '-DCMAKE_HOST_WIN32=true' : ''} -DZLIB_LIBRARY=#{esy-zlib.lib / 'libz.a'} -DZLIB_INCLUDE_DIR=#{esy-zlib.install / 'include'} -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=#{self.install} -S #{self.root} -B #{self.target_dir}",
       "make -j4"
     ],
     "install": [
