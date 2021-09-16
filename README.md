@@ -6,7 +6,7 @@
 [![coverage](https://gitlab.com/randy408/libspng-ci/badges/master/coverage.svg)](https://gitlab.com/randy408/libspng-ci/-/graphs/master/charts)
 [![tag](https://img.shields.io/github/tag-date/randy408/libspng.svg)](https://libspng.org/download)
 
-# libspng
+# libspng 
 
 lib**spng** (**s**imple **png**) is a C library for reading and writing Portable Network Graphics (PNG)
 format files with a focus on security and ease of use.
