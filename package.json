@@ -40,7 +40,7 @@
     ]
   },
   "dependencies": {
-    "esy-cmake": "esy-packages/esy-cmake#e96690ff46924fe74ad3617d89314ecfd6b5c6a6",
+    "@revery/esy-cmake": "^0.3.5001",
     "esy-zlib": "eWert-Online/esy-zlib#9b0394f07551d9fde386e28a6ff269984b63ffcf"
   }
 }
